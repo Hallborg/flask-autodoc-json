@@ -15,6 +15,6 @@ def splitString(methodString):
         if idx == len(tempList) - 1:
             item = item.replace('])', '')
         item = item.replace("'", "")
-        item = item.replace(' ','')
+        item = item.replace(' ', '')
         methodList.append(item)
     return methodList
