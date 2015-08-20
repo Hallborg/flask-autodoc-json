@@ -18,3 +18,5 @@ def splitString(methodString):
         item = item.replace(' ', '')
         methodList.append(item)
     return methodList
+
+def testing_travis(a,b,c):
