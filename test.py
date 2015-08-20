@@ -20,3 +20,4 @@ def splitString(methodString):
     return methodList
 
 def testing_travis(a,b,c):
+    return 'hello'
