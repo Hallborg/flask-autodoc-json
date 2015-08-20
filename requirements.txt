@@ -1,2 +1,6 @@
 flask
+
 flask-autodoc
+
+requests
+pep8
