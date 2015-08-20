@@ -25,9 +25,8 @@ def doc_html():
 def doc_json():
     '''sends the auto generated documentation in JSON'''
     response = make_response(
-        jsonify(
-            data=autodoc_json.generate_json(auto.generate())),
-            200
+        jsonify(data=autodoc_json.generate_json(auto.generate())),
+        200
     )
     return response
 
