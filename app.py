@@ -24,8 +24,12 @@ def doc_html():
 @auto.doc()
 def doc_json():
     '''sends the auto generated documentation in JSON'''
+    data = autodoc_json.generate_json(auto.generate())
+    # response.data.items=data, response.status_code = 200
+    # for more information on make_response:
+    # http://flask.pocoo.org/docs/0.10/api/
     response = make_response(
-        jsonify(data=autodoc_json.generate_json(auto.generate())),
+        jsonify(items=data),
         200
     )
     return response
