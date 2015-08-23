@@ -3,7 +3,7 @@ returning the .generate() response as JSON
 from your main app import this file.
 if you are following the example on
 https://github.com/acoomans/flask-autodoc
-use split_string(auto.generate()) to get the json string which then
+use generate_json(auto.generate()) to get the json string which then
 can by used in jsonify
 
 author: https://github.com/hallborg
