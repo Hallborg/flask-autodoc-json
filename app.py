@@ -46,9 +46,9 @@ def show_user(id):
     if id is 1:
         return 'hello' + str(id)
     elif id is 2:
-        return jsonify({'msg':'hello','id': id})
+        return jsonify({'msg': 'hello','id': id})
     elif id is 3:
-        resp = make_response(jsonify({'msg':'hello','id': id}), 200)
+        resp = make_response(jsonify({'msg': 'hello', 'id': id}), 200)
         # status is created from the status_code (second arg in make_response)
         print resp.status
         return resp
@@ -80,7 +80,6 @@ def create_user():
     last_name = request.form.get('lastName')
     gender = request.form.get('gender')
     age = request.form.get('age')
-
 
     # create user(first_name, last_name, gender, age)
     return make_response('User created', 201)
