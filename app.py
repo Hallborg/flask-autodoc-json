@@ -14,6 +14,7 @@ auto = Autodoc(app)
 # @auto.doc() takes the route and function where it's located and
 # creates an object of it for the documentation
 
+
 @app.route('/')
 @app.route('/<string:name>')
 @auto.doc()
@@ -21,7 +22,7 @@ def index(name=None):
     '''first page of the application
     Use render_template to render html files.
     see templates/index.html'''
-    return render_template('index.html', name = name)
+    return render_template('index.html', name=name)
 
 
 @app.route('/docs')
