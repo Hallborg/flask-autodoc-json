@@ -2,6 +2,7 @@ from flask import Flask
 from flask import request
 from flask import jsonify
 from flask import make_response
+from flask import render_template
 from flask.ext.autodoc import Autodoc
 
 import requests
@@ -12,6 +13,15 @@ auto = Autodoc(app)
 # @app.route(arg) creates a path to the specified arg
 # @auto.doc() takes the route and function where it's located and
 # creates an object of it for the documentation
+
+@app.route('/')
+@app.route('/<string:name>')
+@auto.doc()
+def index(name=None):
+    '''first page of the application
+    Use render_template to render html files.
+    see templates/index.html'''
+    return render_template('index.html', name = name)
 
 
 @app.route('/docs')
